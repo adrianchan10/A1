@@ -1,3 +1,21 @@
+/* Media Queries: Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  #primary { width:67%; }
+  #secondary { width:30%; margin-left:3%;}  
+}
+
+/* Media Queries: Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary { width:100%; }
+  #secondary { width:100%; margin:0; border:none; }
+} 
+
+html { font-size:100%; }
+
+@media (min-width: 640px) { body {font-size:1rem;} } 
+@media (min-width:960px) { body {font-size:1.2rem;} } 
+@media (min-width:1100px) { body {font-size:1.5rem;} } 
+
 
 body {
     Font-Family: 'Work Sans', Sans-Serif;
@@ -6,13 +24,30 @@ body {
     background-color: #D2D3D9;
     overflow-x: hidden;
     color: #2C118C;
+    margin-left: 12rem;
+    margin-right: 12rem;
+  
 }
+
+
+footer {
+  padding: 2rem 1rem;
+  margin: 0 -1rem;
+  width: calc(100% + 2rem);
+  background-color: black;
+  color: var(--color-light-bg);
+    width: 100%;
+ }
+
+
 img {
     max-width: 100%;
     min-height: 100%;
     max-height: 100%;
     display: block;
     object-fit:cover; 
+    height: auto;
+
 }
 
 ul > li {
@@ -21,14 +56,68 @@ ul > li {
     /* You can also add some margins here to make it look prettier */
 }
 
+
+
 .container {
-    height: 750px;
+    height: 90vh;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
     border-color: blue;
     border-style: dashed;
     display: block;
+}
+
+.form-cont {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+form{
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  height: 80vh;
+  margin-top: 50px;
+  border-color: blue;
+  border-style: dashed;
+}
+
+form h3{
+  color:#001660;
+  margin-bottom: 20px; 
+  font-weight: 800;
+}
+
+form input, form textarea{
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  background: white;
+  font-size:16px;
+
+}
+
+form button{
+  padding: 15px;
+  background: white;
+  color: red;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
 }
 
 /* Header Section */
@@ -53,12 +142,22 @@ ul > li {
     text-decoration: none;
 }
 
+.logo h1{
+  display: inline;
+}
 .nav{
-    float: right;
-    border-color: blue;
+  float: right;
+    border-color: rgb(69, 239, 216);
     border-style: dashed;
     padding-right: 10px;
     font-size:large;
+    display: inline;
+    margin-right: 20px;
+
+}
+
+.nav a{
+  text-decoration: none;
 }
 
 /* Body Section */
@@ -71,23 +170,48 @@ ul > li {
 }
 
 .L-column{
-    width: 35%;
+    width: 34%;
     float: left;
     border-color: red;
     border-style: dashed;
     Font-Family: 'Work Sans', Sans-Serif;
-    Font-Size: 45px;
+    Font-Size: 40px;
     height: 100%;
     display: block;
-    padding-left: 20px;
     margin: 0 auto;
 }
 
+.LL-column{
+  margin-left: 150px;
+  display: block;
+  border-color: red;
+    border-style: dashed;
+    Font-Family: 'Work Sans', Sans-Serif;
+    Font-Size: 40px;
+    float: left;
+    width: 35%;
+}
+
+.LL-column a {
+  text-decoration: none;
+}
+
 .R-column {
-    width: 60%;
+    width: 64%;
     float: right;
     border-color: purple;
     border-style: dashed;
+    display: block;
+}
+.RR-column{
+  margin-right: 150px;
+  display: block;
+  border-color: rgb(27, 50, 198);
+  border-style: dashed;
+  Font-Family: 'Work Sans', Sans-Serif;
+  Font-Size: 45px;
+  float: right;
+  width: 33%;
 }
 
 /* Interest section */
@@ -95,16 +219,20 @@ ul > li {
 .section-title{
     height: 64px;
     width: 100%;
+    line-height: 5px;
     border-color: red;
     border-style: dashed;
     text-align: center;
     background-color: #7B89A6;
+    font-size: 25px;
 }
 
+
 .tiles{
-    padding-top: 70px;
+    padding-top: 30px;
     border-color: red;
     border-style: dashed;
+  
     
 }
 .image-container {
@@ -115,17 +243,22 @@ ul > li {
     margin-right: auto;
     margin-left: auto;
     Font-Family: 'Work Sans', Sans-Serif;
+    
   }
+
+
 
 .row {
     display: flex;
     justify-content: center;
+    
   }
   
   /* Create three equal columns that sits next to each other */
   .column {
     flex: 33.33%;
     padding: 5px;
+   
   }
 
   /* About me section*/
