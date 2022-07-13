@@ -12,8 +12,10 @@
     </head>
 
 <body>
+
+    
     <!--Header Section-->
-        <div id="header">
+<!--         <div id="header">
             <div class="logo">
                 <h1> <a href="#"> aDRIAN cHAN</a></h1>
             </div>
@@ -26,6 +28,24 @@
                 <ul>
                     <li><a href="file:///Users/achan/Projects/A1/index.html"> About Me</a></li>
                 </ul>
+            </div>
+            <div class="nav">
+                <img src="Resources/images/menu.png" class="menu-icon">
+            </div>
+        </div> -->
+
+        <div id="header">
+            <div class="logo">
+                <h1> <a href="#"> aDRIAN cHAN</a></h1>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="file:///Users/achan/Projects/A1/index.html"> About Me</a></li>
+                        <li><a href="https://adrianchan10.github.io/A1/contact.html"> Contact Me</a></li>
+                    </ul>
+                </nav>
+                <img src="Resources/images/menu.png" class="menu-icon" onclick="togglemenu()">
             </div>
         </div>
 
@@ -131,6 +151,58 @@
 
             </div>
             
+<!--carosel for media responsive-->
+             <div class="carousel">
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <main id="carousel">
+                    <div class="item">
+                        <a href="https://en.wikipedia.org/wiki/Brazilian_jiu-jitsu" target="_blank" title="Brazilian Jiu Jitsu">
+                        <img src="Resources/images/bjj.jpeg">
+                        <div class="row">
+                            <h3>Brazilian Jiu Jitsu</h3>   
+                        </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        
+                        <img src="Resources/images/philosophy.png">  
+                            <div class="row">
+                                <h3>Philosophy</h3>  
+                            </div>
+                    </div>
+                <div class="item">
+                    <img src="Resources/images/neurons.jpeg">
+                        <div class="row">
+                            <h3>Brain Optimisation</h3>  
+                        </div> 
+                </div>
+                <div class="item">
+                    <img src="Resources/images/weights.jpeg">
+                        <div class="row">
+                            <h3>Personal Development</h3>  
+                        </div>
+                </div>
+                <div class="item">
+                    <img src="Resources/images/library.jpeg">
+                        <div class="row">
+                            <h3>Reading</h3>  
+                        </div>
+                </div>
+                <div class="item">
+                    <a href="https://en.wikipedia.org/wiki/Entrepreneurship" target="_blank" title="Entrepreneurship">
+                        <img src="Resources/images/entreprenuer.webp">
+                        <div class="row">
+                            <p>Entreprenuership</p>  
+                        </div>  
+                    </a>
+                </div>
+                <main>
+             </div>
         </div>
         <div class="section-title"></div>
 
@@ -170,9 +242,23 @@
 
     </div>
 <footer>
-
-
-    
 </footer>
+    <script>
+        var menuList = document.getElementById("menuList");
+
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu() {
+
+            if(menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight="130px";
+    }
+        else {
+            menuList.style.maxHeight = "0px";
+        }
+    }
+</script>
+
 </body>
-    
+</html>
