@@ -1,4 +1,6 @@
-
+html{
+  overflow-y: scroll;
+}
 
 body {
     Font-Family: 'Work Sans', Sans-Serif;
@@ -6,7 +8,7 @@ body {
     max-width: 100%;
     background-color: #D2D3D9;
     overflow-x: hidden;
-    color: #2C118C;
+    color: #2C118C; 
 }
 
 
@@ -39,7 +41,7 @@ ul > li {
 
 
 .container {
-    height: 90vh;
+    height: 100%;
     width: 100%;
     max-width: 60rem;
     overflow: hidden;
@@ -51,10 +53,10 @@ ul > li {
 
 .form-cont {
   width: 100%;
-  height: 80vh;
+  height: 50%;
+  max-height: 90%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  
   
 }
 
@@ -62,12 +64,12 @@ form{
   background: #f2f2f2;
   display: flex;
   flex-direction: column;
-  padding: 1vw 4vw;
+  padding: 4vw;
   width: 90%;
   max-width: 600px;
   border-radius: 10px;
   height: 80vh;
-  margin-top: 50px;
+  margin-top: 10px;
   border-color: blue;
   border-style: dashed;
 }
@@ -205,14 +207,14 @@ nav ul li a:hover{
 }
 
 .LL-column{
-  margin-left: 150px;
+  margin-left: 50px;
   display: block;
   border-color: red;
   border-style: dashed;
   Font-Family: 'Work Sans', Sans-Serif;
   Font-Size: 40px;
   float: left;
-  width: 35%;
+  width: 40%;
 }
 
 .LL-column a {
@@ -227,7 +229,7 @@ nav ul li a:hover{
     display: block;
 }
 .RR-column{
-  margin-right: 150px;
+  margin-right: 50px;
   display: block;
   border-color: rgb(27, 50, 198);
   border-style: dashed;
@@ -301,9 +303,9 @@ nav ul li a:hover{
     position: relative;
   }
 
-.personal-pic{
-    transition: 1s;
-}
+  .personal-pic{
+      transition: 1s;
+  }
 
   .personal-pic img:last-child {
     display: none;  
@@ -315,11 +317,16 @@ nav ul li a:hover{
     display: none;  
   }
 
+  .container .carousel{
+    display: none;
+  }
+
+
   /*Video Section */
 
   .vid-container{
       width: 100%;
-      height: 100%;
+      height: 90vh;
       padding-left: auto;
       padding-right: auto;
       background-color: black;
@@ -330,9 +337,7 @@ nav ul li a:hover{
     margin: 0 auto;
   }
 
-  .carousel{
-    display: hidden;
-  }
+
 
 
   @media only screen and (max-width: 700px) {
@@ -375,11 +380,51 @@ nav ul li a:hover{
       margin-bottom: 50px;
     }
 
+   .container{
+    height: 100%;
+   } 
+
     .L-column{
       width: 100%;
       flex-basis: 100%;
       margin-bottom: 50px;
     }
+
+    .LL-column{
+      max-width: 100%;
+      flex-basis: 100%;
+      margin-left: 10px;
+      width: 100%;
+      display: block;
+    }
+    .LL-column h2{
+      font-size: 35px;
+    }
+
+    .RR-column{
+      max-width: 100%;
+      margin: 0 5px;
+      width: 99%;
+      display: block;
+      overflow-y: scroll;
+      max-height: 100%;
+      overflow-x: hidden;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .RR-column .form-cont {
+      height: 25%;
+      padding: 1vh;
+    }
+
+
+
+    .RR-column .form-cont h4{
+      font-size: 2rem;
+    }
+
+
     .L-column h1{
       font-size: 35px;
     }
@@ -403,7 +448,17 @@ nav ul li a:hover{
     .section-title h2{
       font-size: 2rem;
     }
+
+    .personal-pic img{
+      display: none;
+    }
+
+  
 /* carousel section */
+    .container .carousel{
+      display:contents;
+
+    }
 
     .carousel{
         height: 600px;
@@ -413,7 +468,7 @@ nav ul li a:hover{
         grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 1fr;
         align-items: center;
         justify-items: center;
-        
+        padding-bottom: 2rem;
       }
       
       main#carousel {
@@ -431,6 +486,7 @@ nav ul li a:hover{
         --middle: 3;
         --position: 1;
         pointer-events: none;
+     
       }
       
       div.item {
