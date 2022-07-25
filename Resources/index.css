@@ -41,7 +41,7 @@ ul > li {
 
 
 .container {
-    height: 100%;
+    height: 90vh;
     width: 100%;
     max-width: 60rem;
     overflow: hidden;
@@ -49,6 +49,10 @@ ul > li {
     border-style: dashed;
     display: block;
     margin: 0 auto;
+}
+
+.container2 {
+  display: none;
 }
 
 .form-cont {
@@ -342,6 +346,8 @@ nav ul li a:hover{
 
   @media only screen and (max-width: 700px) {
 
+
+
     nav ul{
       width: 100%;
       position: absolute;
@@ -383,6 +389,17 @@ nav ul li a:hover{
    .container{
     height: 100%;
    } 
+
+   .container2 {
+    height: 90vh;
+    width: 100%;
+    max-width: 60rem;
+    overflow: hidden;
+    border-color: blue;
+    border-style: dashed;
+    display: block;
+    margin: 0 auto;
+}
 
     .L-column{
       width: 100%;
